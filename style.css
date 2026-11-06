@@ -17,6 +17,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 10;
 }
 
 .nav-left {
@@ -60,6 +61,11 @@ body {
   cursor: pointer;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
 .profile {
   width: 32px;
   height: 32px;
@@ -71,7 +77,6 @@ body {
   cursor: pointer;
 }
 
-/* Sidebar */
 .sidebar {
   width: 200px;
   background-color: #0f0f0f;
@@ -81,6 +86,8 @@ body {
   bottom: 0;
   padding-top: 12px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .side-item {
@@ -133,13 +140,12 @@ body {
 }
 
 .video-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .video {
-  width: 300px;
   cursor: pointer;
 }
 
@@ -148,6 +154,7 @@ body {
   height: 170px;
   object-fit: cover;
   border-radius: 8px;
+  display: block;
 }
 
 .video-title {
